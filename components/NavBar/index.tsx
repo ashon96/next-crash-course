@@ -10,7 +10,7 @@ const NavBar: React.FC = () => {
     <nav className={componentStyles.nav}>
       <ul className={componentStyles.list}>
         {links.map((link) => (
-          <li className={componentStyles["link-style"]}>
+          <li key={link.text} className={componentStyles["link-style"]}>
             <Link href={link.href}>{link.text}</Link>
           </li>
         ))}
